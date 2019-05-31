@@ -1,0 +1,21 @@
+
+
+CREATE TABLE `reser` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emri` varchar(45) DEFAULT NULL,
+  `mbiemri` varchar(45) DEFAULT NULL,
+  `email` varchar(85) DEFAULT NULL,
+  `gender` varchar(1) DEFAULT NULL,
+  `room` varchar(7) NOT NULL,
+  `checkin` date DEFAULT NULL,
+  `checkout` date DEFAULT NULL,
+  PRIMARY KEY (`id`,`room`)
+)
+
+
+CREATE TABLE users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
