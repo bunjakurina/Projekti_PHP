@@ -21,7 +21,7 @@ define("Hotel", "Welcome to our Hotel!");
     <a href="login.php" class="w3-bar-item w3-button w3-mobile">Rooms</a>
     <a href="login.php" class="w3-bar-item w3-button w3-mobile">About</a>
     <a href="login.php" class="w3-bar-item w3-button w3-mobile">Contact</a>
-
+    <a href="#" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><?php include_once 'config1.php'?></a>
     <a href="login.php" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Log in</a>
 </div>
 <!-- Header -->

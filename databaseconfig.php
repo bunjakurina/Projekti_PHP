@@ -3,7 +3,7 @@
 define("HOST", "127.0.0.1:3333");
 define("DBNAM", "php");
 define("USERNAME", "root");
-define("PASSWORD", "mmiilan12");
+define("PASSWORD", "045915100");
 
 ?>
 
@@ -12,7 +12,7 @@ define("PASSWORD", "mmiilan12");
 //
 define('DB_SERVER', '127.0.0.1:3333');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'mmiilan12');
+define('DB_PASSWORD', '045915100');
 define('DB_NAME', 'php');
 
 /* Attempt to connect to MySQL database */
