@@ -175,7 +175,7 @@ echo $msg;
             $h = array("playstation", "babycall", "children care");
             $y   = array("pool", "massage", "playstation");
             $newphrase = str_replace($h, $y, $phrase);
-            echo $newphrase;
+            echo "<a href='hangman/hangmanindex.php'>".$newphrase."</a>";
             ?></h6>
     </div>
     <div class="w3-container">
