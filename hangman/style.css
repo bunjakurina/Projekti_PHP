@@ -90,3 +90,95 @@ label
 	background:url(images/bg.jpg);
 	padding:20px;
 }
+
+#hangman-div2 > div:nth-child(1)
+{
+	width:30%;
+	float:left;
+}
+
+#hangman-div2 > div:nth-child(2)
+{
+	width:20%;
+	float:left;
+	padding:20px;
+}
+
+#hangman-div2 > div:nth-child(3)
+{
+	width:40%;
+	float:left;
+	padding:20px;
+}
+
+
+#lives-left-div
+{
+	padding:20px;
+	font-size:35px;
+}
+
+
+#lives-left
+{
+	font-weight:bold;
+	font-size:40px;
+}
+
+#hangman
+{
+	border:1px solid black;
+}
+
+#guessed-word-div
+{
+	text-align:left;
+	font-size:50px;
+	font-weight:bold;
+}
+
+#the-word-was-div
+{
+	font-size:30px;
+	margin-top:40px;;
+	text-align:center;
+}
+
+#play-again-div
+{
+	font-size:30px;
+	margin-top:40px;
+	text-align:center;        
+}
+
+.display-none
+{
+	display:none;
+}
+
+.guessed-letter
+{
+	margin:0px 5px;
+	display:inline-block;
+}
+
+#credits
+{
+	text-align:center;
+	margin-top:20px;
+	font-family:verdana;
+}
+
+#credits a
+{
+	text-decoration:none;
+	color:purple;
+}
+@media all and (max-width:500px)
+{
+	#hangman-div2 > div:nth-child(1), #hangman-div2 > div:nth-child(2), #hangman-div2 > div:nth-child(3)
+	{
+		float:none;
+		width:100%;
+	}       
+}	
