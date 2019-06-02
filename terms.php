@@ -1,12 +1,12 @@
 <?php
 
 
-    $file = fopen("texti.txt", "r") or die("Unable to open file!");
-    echo fread($file,filesize("texti.txt"));
+    $file = fopen("text.txt", "r") or die("Unable to open file!");
+    echo fread($file,filesize("text.txt"));
     fclose($file);
 
 
-$myfile = fopen("texti.txt", "w") ;
+$myfile = fopen("text.txt", "w") ;
 $txt = "Our Terms and Conditions template will get you started with creating your own custom Terms and Conditions agreement.
 
 This template is free to download and use for your website or mobile app.

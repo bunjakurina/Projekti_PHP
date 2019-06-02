@@ -39,7 +39,7 @@
                 </div>
                 <div id="the-word-was-div" class="display-none"></div>
                 <div id="play-again-div" class="display-none">
-                    <a href="index.php">Play again?</a>
+                    <a href="hangmanindex.php">Play again?</a>
                 </div>
             </div>
             <div class="clear"></div>

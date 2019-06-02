@@ -4,8 +4,13 @@ define("Hotel", "Welcome to our Hotel!");
 session_start();
 include_once 'person.php';
 $person=new person($_SESSION['username'],"","");
+echo "<h1>Welcome ".$person->getName($_SESSION['username'])."!</h1>";
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    session_unset();
+    session_destroy();
+    header("Location: index.php");}
 
-echo "<h1>".$person->getName($_SESSION['username'])."</h1>";
+
 ?>
 <html>
 <title>
@@ -45,7 +50,7 @@ echo $msg;
     <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
     <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
 
-    <a href="login.php" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Log in</a>
+
 </div>
 <!-- Header -->
 <header class="w3-display-container w3-content" style="max-width:1500px;">
@@ -105,7 +110,7 @@ echo $msg;
                 <p>Single bed</p>
                 <p>15m<sup>2</sup></p>
                 <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom"><a href="reservation.php"> Choose Room</a></button>
+                <button class="w3-button w3-block w3-black w3-margin-bottom"><a href="reservation1.php"> Choose Room</a></button>
             </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -131,7 +136,7 @@ echo $msg;
                 <p>King-size bed</p>
                 <p>40m<sup>2</sup></p>
                 <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom"><a href="reservation2.php"> Choose Room</a></button>
+                <button class="w3-button w3-block w3-black w3-margin-bottom"><a href="reservation1.php"> Choose Room</a></button>
             </div>
         </div>
         <?php
@@ -222,13 +227,6 @@ echo $msg;
         </div>
     </div>
 
-    <div class="w3-container w3-padding-32 w3-black w3-opacity w3-card w3-hover-opacity-off" style="margin:32px 0;">
-        <h2>Get the best offers first!</h2>
-        <p>Join our newsletter.</p>
-        <label>E-mail</label>
-        <input class="w3-input w3-border" type="text" placeholder="Your Email address">
-        <button type="button" class="w3-button w3-red w3-margin-top">Subscribe</button>
-    </div>
 
     <div class="w3-container" id="contact">
         <h2><?php
@@ -247,11 +245,11 @@ echo $msg;
         <i class="fa fa-envelope w3-text-red" style="width:30px"> </i> <?php
         $str = 'Email: mail@mail.com';
         print_r(explode(',',$str,0));?><br>
-        <form action="/action_page.php" target="_blank">
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-            <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+        <form action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name"  name="Name"></p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" name="Email"></p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message"  name="Message"></p>
+            <p><button class="w3-button w3-black w3-padding-large" type="submit" name="submit">SEND MESSAGE and log out</button></p>
         </form>
     </div>
     </div>

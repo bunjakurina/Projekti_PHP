@@ -45,7 +45,7 @@ define("Hotel", "Welcome to our Hotel!");
 
                 ?>
                 </h2>
-            <h2><i class="fa fa-bed w3-margin-right"></i><a href="#room">Reserve now</a></h2>
+            <h2><i class="fa fa-bed w3-margin-right"></i><a href="login.php">Reserve now</a></h2>
         </div>
 
         </div>
